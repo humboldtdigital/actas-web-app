@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-16.png" sizes="16x16"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-24.png" sizes="24x24"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-32.png" sizes="32x32"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-64.png" sizes="64x64"/>
+    <title data-template="config:app-title"/>
+    <meta name="description" content="Proyecto Actas Capitulares Digitales de la Oficina del Historiador de la Ciudad de La Habana"/>
+    <meta name="pb-template" content="actas.html"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600"/>
+    <link rel="stylesheet" href="resources/css/theme.css"/>
+    <link rel="stylesheet" href="resources/css/actas.css"/>
+    <script type="module" src="pb-components-bundle.js" data-template="pages:load-components"/>
+    <custom-style>
+        <style include="pb-common-styles">
+            body {
+                --pb-view-height: calc(100vh - 192px);
+                --pb-facsimile-height: calc(var(--pb-view-height) - 89px);
+            }
+
+            pb-facsimile {
+                min-width: 480px;
+                height: var(--pb-facsimile-height);
+            }
+
+            .facscaption {
+                font-size: 75%;
+                text-align: right;
+            }
+
+            .metadata {
+                max-width: 20vw;
+            }
+
+            .content-body {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                padding: 0 20px;
+            }
+
+            .content-body pb-view {
+                flex: 1 1;
+            }
+
+            .toc-toggle {
+                display: none;
+            }
+
+            .breadcrumbs {
+                display: flex;
+                justify-content: space-between;
+                align-self: center;
+            }
+            
+            footer{
+            background-color: #102c57;
+        }
+        </style>
+    </custom-style>
+</head>
+
+<body>
+    <pb-page data-template="pages:pb-page" unresolved="unresolved">
+        <pb-document id="document1" data-template="pages:pb-document"/>
+        <app-drawer-layout force-narrow="force-narrow">
+            <app-drawer data-template="lib:include" data-template-path="templates/drawer.html"/>
+            <app-header-layout>
+                <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall">
+                    <app-toolbar data-template="lib:include" data-template-path="templates/menu.html"/>
+                    <app-toolbar data-template="lib:include" data-template-path="templates/toolbar.html"/>
+                </app-header>
+                <section class="breadcrumbs">
+                    <div>
+                        <pb-view id="title-view1" src="document1" xpath="//teiHeader" view="single">
+                            <pb-param name="header" value="letter"/>
+                        </pb-view>
+                    </div>
+                    <pb-grid-action action="add" class="grid-add" grid="#grid">
+                        <paper-button>
+                            <iron-icon icon="icons:view-carousel"/> <pb-i18n key="document.add-panel">Add</pb-i18n>
+                        </paper-button>
+                    </pb-grid-action>
+                </section>
+                
+                <main class="content-body">
+                    <pb-grid id="grid" panels="[0,1]" subscribe="transcription" animation="true">
+                        <!-- For every grid column, the following template will be stamped into the page -->
+                    <template>
+                    <pb-panel emit="transcription">
+                        <!-- Added to the toolbar -->
+                        <pb-grid-action grid="#grid" slot="toolbar" action="remove">
+                    <paper-icon-button icon="icons:close"/>
+                        </pb-grid-action>
+                        <template title="Transcripción">
+                    <pb-view class="animated" src="document1" xpath="//text/body/div[@type='original']" emit="transcription">
+                    </pb-view>
+                    </template>
+                     <template title="Trasuntada">
+                    <pb-view class="animated" src="document1" xpath="//text/body/div[@type='trasuntada']" subscribe="transcription"/>
+                    </template>
+                        <template title="Facsimile">
+                        <pb-facsimile base-uri="https://apps.existsolutions.com/cantaloupe/iiif/2/" facsimiles="[&#34;15929_000_IDL5772_BOss12034_IIIp79.jpg&#34;]" default-zoom-level="0" show-navigator="show-navigator" show-navigation-control="show-navigation-control">
+                    </pb-facsimile>
+                </template>
+                
+            </pb-panel>
+        </template>
+        <pb-view src="document1" xpath="//teiHeader" view="single" class="metadata" subscribe="transcription" emit="transcription">
+                            <pb-param name="view" value="metadata"/>
+                        </pb-view>
+                    </pb-grid>
+                </main>
+                 <footer class="version">
+                    TEI Publisher <span data-template="pages:version"/> /
+                    web components <pb-version/> /
+                    API <span data-template="pages:api-version"/> 
+                </footer>
+            </app-header-layout>
+        </app-drawer-layout>
+    </pb-page>
+    <div class="splash"/>
+</body>
+
+</html>

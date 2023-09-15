@@ -1,0 +1,222 @@
+<?xml-model href="prohd.rng"  schematypens="http://relaxng.org/ns/structure/1.0"  type="application/xml"?><?xml-model href="prohd.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="document" xml:id="ed_sq5_wlq_3xb">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Cabildo de 4 de Marzo de 1558</title>
+                <editor>Echarri, Bryan</editor>
+            </titleStmt>
+            <editionStmt>
+                <p/>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Oficina del Historiador de la Ciudad de la Habana</publisher>
+                <pubPlace>La Habana</pubPlace>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+                        (CC BY 4.0)</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc rend="manuscript">
+                    <msIdentifier>
+                        <institution>Archivo Histórico</institution>
+                        <collection>Fondo Gobierno de La Habana. Serie Actas del Ayuntamiento del
+                            período colonial (1550-1898)</collection>
+                        <idno>
+                            <idno type="shelfmark"/>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <orgName>Gobierno de La Habana</orgName>
+                <date when="1558-03-04" cert="high"/>
+                <placeName>La Habana</placeName>
+            </creation>
+            <langUsage>
+                <language ident="es">Español</language>
+            </langUsage>
+            <textClass>
+                <catRef scheme="#form" target="#manuscript"/>
+                <catRef scheme="#subject" target="#geography"/>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="original">
+                <fw type="folNum">162v</fw>
+                <note place="left" hand="#author"><p>Cabildo de<lb/> 4 de Mar<g ref="#typoHyphen"/><lb break="no"/>zo de 1558 </p></note>
+                <p> En la villa de San <choice>
+                        <orig>Cristobal</orig>
+                        <reg>Cristóbal</reg>
+                    </choice> de la Habana en <date when="1558-03-04" calendar="#Gregorian">cuatro<lb/><choice>
+                            <orig> dias</orig>
+                            <reg>días</reg>
+                        </choice> del mes de Marzo de mil <choice>
+                            <sic>e</sic>
+                            <corr type="deleted"/>
+                        </choice> quinientos <choice>
+                            <sic>e</sic>
+                            <corr type="deleted"/>
+                        </choice> cincuenta <choice>
+                            <orig>e</orig>
+                            <reg>y</reg>
+                        </choice> ocho años</date><lb/> en presencia de mi Francisco Perez<choice>
+                        <orig/>
+                        <reg>Pérez</reg>
+                    </choice> de Borroto escribano de<lb/> Su <choice>
+                        <orig>Magestad</orig>
+                        <reg>Majestad</reg>
+                    </choice>
+                    <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice> público del número <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice> cabildo <choice>
+                        <sic>desta</sic>
+                        <corr cert="high">de esta</corr>
+                    </choice> dicha villa<lb/> se juntaron <choice>
+                        <orig>á</orig>
+                        <reg>a</reg>
+                    </choice> cabildo los Señores Juan de Rojas Te<g ref="#typoHyphen"/><lb break="no"/> niente de Gobernador <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice> Antonio de la Torre <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice> Diego<lb/> de Soto <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice> Anton Recio <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice> lo que se proveyó en el dicho<lb/> Cabildo <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice> acordó es lo siguiente.<lb/>
+                </p>
+            </div>
+            <div>
+                <p> En este dicho <choice>
+                        <orig>dia</orig>
+                        <reg>día</reg>
+                    </choice> en este dicho cabildo <choice>
+                        <orig>pidio</orig>
+                        <reg>pidió</reg>
+                    </choice> por pe<g ref="#typoHyphen"/><lb break="no"/> tición <choice>
+                        <orig>Ynés</orig>
+                        <reg>Inés</reg>
+                    </choice> de Gamboa que <choice>
+                        <orig>lehagan</orig>
+                        <reg>le hagan</reg>
+                    </choice> merced del sitio de<lb/> Caneimar que es cerca de Matanzas para poblar
+                    de<lb/> un <seg type="comment"><orig>hato</orig><note xml:id="nhmx_y3r_3xb">Porción de ganado mayor o menor</note></seg> de vacas atento <choice>
+                        <orig>á</orig>
+                        <reg>a</reg>
+                    </choice> que era de Pero <choice>
+                        <orig>Velasques</orig>
+                        <reg>Velazquez</reg>
+                    </choice>..<lb/>
+                    <add place="intralinear">...do</add>
+                    <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice> se lo tuvo poblado <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice>
+                    <choice>
+                        <orig>ansimismo</orig>
+                        <reg>asimismo</reg>
+                    </choice> le hagan merced<lb/> de <choice>
+                        <orig>lasabána</orig>
+                        <reg>la sabana</reg>
+                    </choice> de los Macuriges que es nueve <choice>
+                        <orig>ó</orig>
+                        <reg>o</reg>
+                    </choice>
+                    <choice>
+                        <orig>dies</orig>
+                        <reg>diez</reg>
+                    </choice>
+                    <seg type="comment"><orig>leguas</orig><note xml:id="nk4d_chr_3xb">Medida
+                            itineraria, variable según los países o regiones, definida por el camino
+                            que regularmente se anda en una hora, y que en el antiguo sistema
+                            español equivale a 5572,7 metros.</note></seg><lb/> de Matanzas para
+                    poblar de otro hato de vaca <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice> los<lb/> dichos Señores Justicia Regidores <choice>
+                        <orig>digeron</orig>
+                        <reg>dijeron</reg>
+                    </choice> que le ha<lb break="no"/> cían <choice>
+                        <orig>éhicieron</orig>
+                        <reg> e hicieron</reg>
+                    </choice> la dicha merced de ambas las dichas<lb/>
+                    <choice>
+                        <orig>sabánas</orig>
+                        <reg>sabanas</reg>
+                    </choice> con tanto que el de Matanzas que es la sa </p>
+            </div>
+            <div>
+                <fw type="folNum">163r</fw>
+                <p>
+                    <seg type="comment"><orig/><note xml:id="nknv_nwn_jxb">El folio está encabezado
+                            por un cuño y el texto "Sello tercero para el bienio de 1858 y
+                            1859----dos reales. En líena aparte aparecen tres firmas en la parte
+                            superior del texto que sigue </note></seg>bana de Caneimar lo pueble
+                    dentro de seis meses <choice>
+                        <orig>é</orig>
+                        <reg>y</reg>
+                    </choice><lb/>lo de los Macuriges dentro de ocho meses la cual merced<lb/>d<choice>
+                        <orig>igeron</orig>
+                        <reg>dijeron</reg>
+                    </choice> que le <choice>
+                        <orig>hacian</orig>
+                        <reg>hacían</reg>
+                    </choice>
+                    <choice>
+                        <orig>é</orig>
+                        <reg>e</reg>
+                    </choice> hicieron atento <choice>
+                        <orig>á</orig>
+                        <reg>a</reg>
+                    </choice> que es servicio de<lb/>Su <choice>
+                        <orig>Magestad</orig>
+                        <reg>Majestad</reg>
+                    </choice>
+                    <choice>
+                        <orig>ébien</orig>
+                        <reg>y bien</reg>
+                    </choice>
+                    <choice>
+                        <orig>épró</orig>
+                        <reg>y pro</reg>
+                    </choice>
+                    <choice>
+                        <sic>desta</sic>
+                        <corr cert="high">de esta</corr>
+                    </choice> villa que se pueblen de ha<g ref="#typoHyphen"/><lb break="no"/><add place="intralinear">En el margen izquierdo de la línea aparece una
+                        firma</add> tos de vacas de las dichas sabanas = Juan de Rojas = Diego de
+                    Soto =<lb/>Antonio de la Torre = Anton Recio = Pasó ante mi Francisco<lb/><add place="intralinear"><add place="intralinear">En el margen izquierdo de la
+                            línea aparece una firma</add></add>
+                    <choice>
+                        <orig>Perez</orig>
+                        <reg>Pérez</reg>
+                    </choice> de Borroto escribano <choice>
+                        <orig>publico</orig>
+                        <reg>público</reg>
+                    </choice> y del cabildo. </p>
+            </div>
+            <div type="trasuntada">
+                <pb/>
+                <p>To do: Edición "trasuntada"</p>
+            </div>
+        </body>
+    </text>
+</TEI>

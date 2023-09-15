@@ -1,0 +1,13 @@
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description>Actas Capitulares Digitales</description>
+    <author/>
+    <status>beta</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <prepare>pre-install.xql</prepare>
+    <finish>post-install.xql</finish>
+    <target>actas</target>
+    <permissions user="admin" group="tei" mode="rw-r--r--"/>
+    <deployed>2023-09-07T12:52:30.428+02:00</deployed>
+</meta>
